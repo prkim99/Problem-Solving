@@ -1,0 +1,32 @@
+divide and conquer
+->점화식 생성
+->리커전 트리를 만들 수 있음
+H(n, a,b,c)={move(1,a,c)
+		H(n-1,a,c,b)+move(n,a,c)+H(n-1,b,a,c)
+a=from, b=via, c=to
+def hanoi(int n, int a,int b, int c){
+if(x==0)
+	return
+hanoi(n-1,a,c,b)
+if(fin)
+	return
+s[c].push(n)//a위티의 n번째 원반을 c위치로 이동
+s[a].pop() //원반이 추가/제거된 막대의 저장정보 갱신
+if(++cnt==k)
+	fin=true
+	return
+hanoi(n-1,b,a,c)
+}
+->inorder traversal 순서대로 알고리즘이 동작하게된다
+
+점화식 분석
+t(n)=2t(n-1)+1 =2(2T(n-2)+1))+1=2^2t(n-2)+2^1+2^0=2^3t(n-3)+2^2+2^1+2^0=....=2^n-1   (t(1)=1이므로)
+재귀함수라 시간복잡도 오 2의 n승
+
+
+원반의 개수-> 움직이는 방법은 원반의 종류의 개수+A 와 동일함
+so, 원반이 중복되면->중복되는 원반은 그냥 1개로 무방
+다만 중복되는 횟수만큼 추가이동 필요
+만약 중복되는 원반을 따로 처리해야 이점이 있다면?-> 확인해봤는데 없음
+move부분이 같은 크기의 원판 개수만큼 실행됨
+->o(2^nm)임 (모든 원판이 m개만큼의 같은 크기 원판이 존재할 때)
