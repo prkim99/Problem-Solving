@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="prob-W05_A-EMP2(count).cpp">
+    <ClCompile Include="prob-W01\prob-W01_A_GCD.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
