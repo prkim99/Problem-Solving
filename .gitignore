@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/fdfaf.cpp
+/prob-W01_B.cpp
+/prob-W04_B-ecoProtection_LCA.cpp

@@ -3,12 +3,11 @@
 #include<iterator>
 using namespace std;
 stack<int> s[3];
-int p[11];
 int n,k;
 int cnt=0;
 
 bool hanoii(int n,int from, int via,int to){
-
+	
 	if (n == 0) {
 		return false;
 	}
@@ -19,7 +18,7 @@ bool hanoii(int n,int from, int via,int to){
 
 	s[from].pop();
 	s[to].push(n);
-	j++;
+
 	if (++cnt == k) {
 		return true;
 	}
@@ -37,9 +36,7 @@ int main() {
 		cin >> n;
 		cin >> k;
 		for (int i = n; i >= 1; i--) {
-			for (int j = 0; j < p[i]; j++) {
-				s[0].push(i);
-			}
+			s[0].push(i);
 		}
 		hanoii(n, 0, 1, 2);
 		if(!s[1].empty()) {

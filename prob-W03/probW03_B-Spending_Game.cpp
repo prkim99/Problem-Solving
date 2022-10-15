@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-	//freopen("sample-W03_B.1.in", "r", stdin);
+	//freopen("sample-w03_b.1.in", "r", stdin);
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
