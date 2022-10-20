@@ -22,7 +22,8 @@ bool hanoii(int n,int from, int via,int to){
 	if (++cnt == k) {
 		return true;
 	}
-	return hanoii(n - 1, via, from, to);
+
+	hanoii(n - 1, via, from, to);
 }
 
 int main() {
