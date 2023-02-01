@@ -1,0 +1,6 @@
+pair<set<pair<int,int>>::iterator,bool> ite=monster.inser(ability,i)l
+//현대 괴물의 위치를 탐색하여 ite에 저장
+lower_bound??
+algorithm 헤더: 바이너리 써치 (랜덤어세스가 가능할떄, logn타임/ 불가능하면 linear타임)
+set에서: balanced binary search 트리 logn타임 가능
+

@@ -4,57 +4,63 @@
 //#include <iostream>
 //#include<vector>
 //#include<string>
-//#include<cstring>
-//#include<stack>
+//#include<algorithm>
 //using namespace std;
-//vector<int> val;
-//stack<int> s;
+//vector <pair<long long int, long long int>> tmp;
+//
+//
+//int cal2(int a) {
+//	int k = 0;
+//	while (a > 1) {
+//		a = a >> 1;
+//		k++;
+//	}
+//	return k;
+//}
+//long long int calC(int n, int k) {
+//	long long int result = 1;
+//	int l = k;
+//	if ((n - k) < k) {
+//		l = n - k;
+//	}
+//	int j = 1;
+//	for (int i = n; i >= n - l + 1; i--, j++) {
+//		result *= i;
+//		result /= j;
+//	}
+//	return k * result;
+//}
 //
 //int main()
 //{
-//	ios_base::sync_with_stdio(false);
-//	cin.tie(NULL);
-//	cout.tie(NULL);
+//	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 //	int t, tt = 0;
-//	string op;
 //	cin >> t;
+//
+//	tmp.push_back({ 1,2 });
 //	while (t > tt) {
-//		cin >> op;
-//		int len = op.length();
-//		for (int i = 0; i < len; i++) {
-//			if (op[i] == '+') {
-//				int v1 = s.top();
-//				s.pop();
-//				int v2 = s.top();
-//				s.pop();
+//		int n;
+//		cin >> n;
+//		int sq= cal2(n);
+//		if (sq < tmp.size()) {
+//			cout << tmp[sq - 1].first << " " << tmp[sq - 1].second << "\n";
 //
-//				s.push(v1 + v2);
-//			}
-//			else if (op[i] == '-') {
-//				int v1 = s.top();
-//				s.pop();
-//				int v2 = s.top();
-//				s.pop();
-//
-//				s.push(v2 - v1);
-//			}
-//			else if (op[i] == '*') {
-//				int v1 = s.top();
-//				s.pop();
-//				int v2 = s.top();
-//				s.pop();
-//
-//				s.push(v1 * v2);
-//			}
-//			else if ('1' <= int(op[i]) <= '9') {
-//				s.push(op[i]-'0');
-//			}
 //		}
-//		cout << s.top() << "\n";
-//		s.pop();
+//		else {
+//			for (int ll = tmp.size(); ll <= sq; ll++) {
+//				long long int count = tmp[ll-1].first;
+//				for (int i = 1; i < ll; i++) {
+//					count += calC(ll, i);
+//				}
+//				count += ll + 1;
+//				tmp.push_back({ count,0 });
+//				tmp[ll - 1].second = count - tmp[ll - 1].first;
+//			}
+//			cout << tmp[sq - 1].first << " " << tmp[sq - 1].second << "\n";
+//		}
 //		tt++;
 //	}
-//
+// 
 //
 //	return 0;
 //}

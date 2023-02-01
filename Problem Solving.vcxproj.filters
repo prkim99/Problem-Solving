@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dodo.cpp">
+    <ClCompile Include="ps_final.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="prob-W11\prob-W11_A.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
