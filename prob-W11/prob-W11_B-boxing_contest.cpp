@@ -55,11 +55,11 @@ int main() {
 			if (score[1] <= score[i]) {
 				chk.push_back(i);
 			}
-		}//ÀÎÇÏÆÀº¸´Ù Á¡¼ö°¡ °°°Å³ª ³ôÀº ÆÀ ÃÖ´ëÈü¿¡ ³ÖÀ½ mlogm
+		}//ì¸í•˜íŒ€ë³´ë‹¤ ì ìˆ˜ê°€ ê°™ê±°ë‚˜ ë†’ì€ íŒ€ ìµœëŒ€íž™ì— ë„£ìŒ mlogm
 		
 		if (chk.empty()) {
 			cout << 0 << "\n";
-		}//ÀÌ¹Ì ÀÎÇÏÆÀÀÌ ÀÏµîÀÏ¶§
+		}//ì´ë¯¸ ì¸í•˜íŒ€ì´ ì¼ë“±ì¼ë•Œ
 		else{
 			int cnt = 0;
 			bool flag = false;
@@ -68,10 +68,10 @@ int main() {
 					continue;
 				}
 				play.push_back({ score[r[inhateam[i] - 1]], inhateam[i]});
-				//{ÀÎÇÏÆÀ ¸â¹ö°¡ °æ±âÇÒ »ó´ëÆÀÀÇ ÇöÀç Á¡¼ö, ÀÎÇÏÆÀ ¸â¹ö} ÀÌ·¸°Ô ´ã¾Æ¼­
+				//{ì¸í•˜íŒ€ ë©¤ë²„ê°€ ê²½ê¸°í•  ìƒëŒ€íŒ€ì˜ í˜„ìž¬ ì ìˆ˜, ì¸í•˜íŒ€ ë©¤ë²„} ì´ë ‡ê²Œ ë‹´ì•„ì„œ
 			}//n
 			sort(play.begin(), play.end(), greater<>()); //mlogm
-			//ÇöÀç Á¡¼ö°¡ ³ôÀº ÆÀºÎÅÍ °æ±â¸¦ ÁøÇàÇÔ(ÃÖ´ëÇÑ 1µî¿¡ °¡±î¿î ÆÀÀÇ Á¡ºÎºÎÅÍ ±î´Â°Ô Áß¿äÇÏ¹Ç·Î!)
+			//í˜„ìž¬ ì ìˆ˜ê°€ ë†’ì€ íŒ€ë¶€í„° ê²½ê¸°ë¥¼ ì§„í–‰í•¨(ìµœëŒ€í•œ 1ë“±ì— ê°€ê¹Œìš´ íŒ€ì˜ ì ë¶€ë¶€í„° ê¹ŒëŠ”ê²Œ ì¤‘ìš”í•˜ë¯€ë¡œ!)
 			
 			int chk_count = 0;
 			for (int i = 0; i <play.size(); i++) {
@@ -80,7 +80,7 @@ int main() {
 				cnt++;
 				while (chk_count<chk.size() && score[1] > score[chk[chk_count]]) {
 					chk_count++;
-				}//ÀÎÇÏÆÀº¸´Ù ´õ ³ôÀº Á¡¼ö ¿´´ø »ç¶÷ÇÏ³ª¾¿ Áö¿ò
+				}//ì¸í•˜íŒ€ë³´ë‹¤ ë” ë†’ì€ ì ìˆ˜ ì˜€ë˜ ì‚¬ëžŒí•˜ë‚˜ì”© ì§€ì›€
 				if (chk_count==chk.size()) {
 					break;
 				}
